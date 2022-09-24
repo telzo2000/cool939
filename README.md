@@ -16,7 +16,7 @@ cool939 is the younger brother of cool936.
 <br>
 そして...
 <br>
-cool939はcool939の弟分です。
+cool939はcool936の弟分です。
 <br>
 
 ![](img/img00001.jpg)
