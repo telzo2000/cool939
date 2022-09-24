@@ -3,7 +3,7 @@
 cool939 is keyboard.It is designed by m.ki.
 
 ![](img/img00002.jpg)
-## What is cool936?
+## What is cool939?
 
 cool939 is a split keyboard with a [qaz](https://www.cbkbd.com/product/qaz-keyboard-kit) layout.
 <br>
