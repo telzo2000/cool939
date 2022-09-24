@@ -49,6 +49,8 @@
 //#define BACKLIGHT_BREATHING
 
 #define RGB_DI_PIN D3
+#define RGBLIGHT_SPLIT
+#define RGBLED_SPLIT { 6, 6 }
 #ifdef RGB_DI_PIN
 #    define RGBLED_NUM 16
 #    define RGBLIGHT_HUE_STEP 16
