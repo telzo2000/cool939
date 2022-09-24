@@ -21,9 +21,6 @@ cool939はcool936の弟分です。
 
 ![](img/img00001.jpg)
 
-## Build Guide
-https://github.com/telzo2000/cool936/blob/main/buildguide_for_cool936.md
-
 <br>
 
 ## Terms of use(使用条件)
