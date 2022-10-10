@@ -28,14 +28,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------------------------------           ---------------------------|
      * |     Z   |  X |  C |  V |  B |           |  N |  M |  , |  .  |  /  |
      * `--------------------------------      ------------------------------'
-     *        |LCtrl| LGui| LAlt | spc |      |Rise| spc    |Lower|Adjust|
+     *        |LCtrl| LGui| LAlt |Lower|      |Rise| spc    | down|  up  |
      *        `-------------------------      ---------------------------'
      */
     [_QWERTY] = LAYOUT(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_BSPC,    
     KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_ENT,
     KC_Z, KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    LT(KC_MINS,KC_COMM),   KC_DOT, KC_SLASH, 
-    KC_LCTL, KC_LGUI, KC_LALT,LT(_LOWER,KC_SPACE),    LT(_RAISE,KC_SPACE), LSFT_T(KC_SPACE),  LT(_LOWER,KC_DOWN), LT(_ADJUST,KC_UP) 
+    KC_LCTL, KC_LGUI, KC_LALT,LT(_LOWER,KC_SPACE),    LT(_RAISE,KC_SPACE), LSFT_T(KC_SPACE),  KC_DOWN, KC_UP 
   ),
     /* LOWER Layer
     *  ,-------------------------            -------------------------------.
@@ -45,14 +45,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------------------------------           ---------------------------|
      * |     +   |  - |  * |  / |  = |           |  ~ | \  |  { |  }   | /  |
      * `--------------------------------      ------------------------------'
-     *        |LCtrl| LGui| LAlt | spc |      |Rise|  -    |Lower|Adjust|
+     *        |LCtrl| LGui| LAlt | spc |      |Rise|  -    |ADJUST| NO   |
      *        `-------------------------      ---------------------------'     
 */  
   [_LOWER] = LAYOUT(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_BSPC,   
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, 
-    KC_PPLS,    KC_PMNS,    KC_PAST,    KC_PSLS,    KC_PEQL,    KC_GRV,    KC_JYEN,    RSFT(KC_LBRC), RSFT(KC_RBRC), KC_SLASH,  
-    KC_LCTL, KC_LGUI, KC_LALT,LSFT_T(KC_SPACE),       LT(_RAISE,KC_SPACE), KC_MINS,  KC_NO, KC_NO
+    KC_PPLS,    KC_PMNS,    KC_PAST,    KC_PSLS,    KC_PEQL,    KC_GRV,    KC_JYEN,    RSFT(KC_LBRC), RSFT(KC_RBRC), KC_BSLASH,  
+    KC_LCTL, KC_LGUI, KC_LALT,LSFT_T(KC_SPACE),       LT(_RAISE,KC_SPACE), KC_MINS,  TO(_ADJUST), KC_NO
  
  ),
   /* RAISE Layer
@@ -81,7 +81,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_TOG,    RGB_MOD,    RGB_HUI,    RGB_HUD,    RGB_SAI,    RGB_SAD,    RGB_VAI,    KC_LBRC,   KC_RBRC, KC_SLASH, 
     RGB_VAD, RGB_SPI,RGB_SPD,RGB_M_T,        KC_NO, LSFT(KC_MINS),  LT(_LOWER,KC_BSPC),KC_NO
  
+  ), 
+
+ [_ADJUST] = LAYOUT(
+    RGB_TOG,    RGB_M_P,    RGB_M_B,    RGB_M_R,    RGB_M_SW,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,  KC_BSPC,  
+    RGB_M_SN,   RGB_M_K,    RGB_M_X,    RGB_M_G,   RGB_M_T,     KC_MS_L,  KC_MS_D,  KC_MS_U,  KC_MS_R, LSFT(KC_MINS),
+    RGB_TOG,    RGB_MOD,    RGB_HUI,    RGB_HUD,    RGB_SAI,    KC_WH_L,  KC_WH_D,  KC_WH_U,  KC_WH_R, KC_SLASH, 
+    RGB_VAD,    RGB_SPI,    RGB_SPD,    KC_BTN1,    KC_NO,      KC_BTN2,  TO(_QWERTY),KC_NO
   ) 
+
 };
 
 void encoder_update_user(uint8_t index, bool clockwise) {
