@@ -1,1 +1,1 @@
-# The default keymap for cool939
+# The via keymap for cool939
