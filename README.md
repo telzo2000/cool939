@@ -48,6 +48,7 @@ https://github.com/telzo2000/cool936/blob/main/buildguide_for_cool936.md
 
 ## parts list
 
+|番号| 名前 | 数 | 備考 | 調達先の例 | 参考価格 |
 |--|--|--|--|--|--|
 |1|PCB Leftside|1|108.3 mm<br>* 86.8 mm|JLCPCB|５枚８ドル程度|
 |2|PCB Rightside|1|114.3 mm<br>* 87.4 mm|↑|５枚で８ドル程度|
